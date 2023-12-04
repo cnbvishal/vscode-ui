@@ -16,6 +16,19 @@ function insertNode(tree,folderId,item,isFolder){
     return {...tree,items:latestNode}
 }
 
-return {insertNode};
+function deleteNode(tree, parentId, folderId, isFolder) {
+    if (tree.id === parentId) {
+        const treeItems = tree.items.filter((data) => data.id !== folderId);
+        return { ...tree, items: treeItems };
+    }
+
+    let latestNode = []
+    latestNode = tree.items.map((ob) => {
+        return deleteNode(ob, parentId, folderId, isFolder)
+    });
+    return { ...tree, items: latestNode }
+}
+
+return {insertNode, deleteNode};
 }
 export default useTraverseTree;
