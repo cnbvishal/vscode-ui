@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  width: 300px; /* Fixed width */
+  width: 320px; /* Fixed width */
   cursor: pointer;
   border: 1px solid #444;
   border-radius: 4px;
@@ -50,7 +50,7 @@
 .file {
   margin-top: 5px;
   padding: 8px;
-  width: 300px; /* Fixed width */
+  width: 320px; /* Fixed width */
   display: flex;
   flex-direction: column;
   background-color: #444;
@@ -95,10 +95,7 @@
   cursor: pointer;
 }
 
-/* Additional dark mode-like styling */
 body {
-  background-color: #222;
+  background-color: #202b47;
   color: #fff;
 }
-
-/* Adjust other styles as needed */
