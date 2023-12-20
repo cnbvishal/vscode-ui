@@ -19,7 +19,13 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App"style={{ margin: '30px' }}>
+      <h1>
+      Vscode-ui-Clone
+      </h1>
+      <p>
+        Welcome to the Vscode-ui-Clone application! This is a demo application showcasing a UI similar to Visual Studio Code's file explorer.
+      </p>
       <Folder
         explorer={explorerData}
         parentId={explorerData.id}
