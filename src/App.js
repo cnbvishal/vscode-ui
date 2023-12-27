@@ -4,18 +4,17 @@ import Folder from "./components/Folder";
 import "./style.css";
 import useTraverseTree from './custom/use-traverse-tree';
 function App() {
-
   const [explorerData, setExplorerData] = useState(explorer)
   const {insertNode, deleteNode}=useTraverseTree();
 
   const handleInsertNode = (folderId, item, isFolder) => {
-    const finalTree = insertNode(explorerData, folderId, item, isFolder);
-    setExplorerData(finalTree)
+    const tree = insertNode(explorerData, folderId, item, isFolder);
+    setExplorerData(tree)
   }
 
   const handleDeleteNode = (parentId, folderId, isFolder) => {
-    const finalTree = deleteNode(explorerData, parentId, folderId, isFolder);
-    setExplorerData(finalTree)
+    const tree = deleteNode(explorerData, parentId, folderId, isFolder);
+    setExplorerData(tree)
   }
 
   return (
